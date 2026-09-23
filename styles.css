@@ -614,3 +614,44 @@ button{font-family:inherit;cursor:pointer;background:none;border:0;color:inherit
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
   .hero-slide .ph{animation:none}
 }
+
+/* ══════════ platform optimization — android + windows ══════════ */
+::selection{background:var(--gold);color:#14100a}
+/* windows scrollbars */
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#0e0a06}
+::-webkit-scrollbar-thumb{background:linear-gradient(var(--gold-2),var(--gold-3));border-radius:8px;border:2px solid #0e0a06}
+::-webkit-scrollbar-thumb:hover{background:var(--gold)}
+*{scrollbar-width:thin;scrollbar-color:var(--gold-2) #0e0a06}
+/* android touch */
+html{-webkit-tap-highlight-color:transparent}
+a,button,[data-hover]{touch-action:manipulation}
+/* keyboard / windows tab users */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+/* keep the text cursor usable inside form fields on desktop */
+@media(pointer:fine){
+  input,textarea,select{cursor:text}
+  select{cursor:pointer}
+}
+/* perf: static grain on touch devices (no constant repaint) */
+@media(pointer:coarse){
+  .grain{animation:none;opacity:.05}
+  .cursor-dot,.cursor-ring{display:none!important}
+  *{cursor:auto!important}
+}
+/* small android phones */
+@media(max-width:380px){
+  .hero-title{font-size:16.5vw}
+  .sec-index{letter-spacing:.32em}
+  .ticker-item{font-size:12px;letter-spacing:.24em}
+  .rev-card{flex:0 0 78vw}
+  .gal-item{flex:0 0 74vw;height:52vw}
+  .f-word{font-size:17.5vw}
+  .stats{grid-template-columns:1fr 1fr}
+  .booking-bar{padding:26px 22px}
+}
+/* very large windows displays: cap the measure */
+@media(min-width:1700px){
+  .wrap{max-width:1560px}
+  .hero-title{font-size:clamp(90px,9.5vw,220px)}
+}
