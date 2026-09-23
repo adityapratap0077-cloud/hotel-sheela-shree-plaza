@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hotel Sheela Shree Plaza — Luxury Business Hotel in Jhansi</title>
+<title>Hotel Sheela Shree Plaza — Jhansi's Landmark of Hospitality</title>
 <meta name="description" content="Hotel Sheela Shree Plaza — Jhansi's first luxury business hotel. 40 elegant rooms, Aroma multi-cuisine restaurant, Food Xpress café, grand banquet halls for weddings & conferences. Opp. Medical College Gate No. 1, Kanpur Road, Jhansi.">
 <link rel="stylesheet" href="fonts/fonts-local.css">
 <link rel="stylesheet" href="styles.css">
@@ -11,16 +11,22 @@
 </head>
 <body>
 
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cRing" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span id="progBar"></span></div>
+
 <!-- ══════════ PRELOADER ══════════ -->
 <div class="preloader" id="preloader">
+  <div class="pl-curtain"></div>
   <div class="preloader-inner">
-    <div class="preloader-mono">S</div>
-    <div class="preloader-name">SHEELA SHREE <span>PLAZA</span></div>
-    <div class="preloader-bar"><span></span></div>
+    <p class="pl-eyebrow">Jhansi · Uttar Pradesh</p>
+    <div class="pl-name"><span class="wi">SHEELA</span> <span class="wi">SHREE</span> <span class="wi">PLAZA</span></div>
   </div>
+  <div class="pl-count" id="plCount">00</div>
 </div>
 
-<!-- ══════════ HEADER ══════════ -->
+<!-- ══════════ TOPBAR ══════════ -->
 <div class="topbar">
   <div class="wrap topbar-in">
     <span class="topbar-item">
@@ -35,24 +41,25 @@
   </div>
 </div>
 
+<!-- ══════════ HEADER ══════════ -->
 <header class="header" id="header">
   <div class="wrap header-in">
-    <a href="#top" class="brand">
+    <a href="#top" class="brand" data-hover>
       <img class="brand-logo" src="img/real/logo-light.png" alt="Hotel Sheela Shree Plaza — official logo">
     </a>
     <nav class="nav" id="nav">
-      <a href="#about">About</a>
-      <a href="#rooms">Rooms</a>
-      <a href="#dining">Dining</a>
-      <a href="#banquets">Banquets</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#explore">Explore</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><i>01</i>About</a>
+      <a href="#rooms"><i>02</i>Rooms</a>
+      <a href="#dining"><i>03</i>Dining</a>
+      <a href="#banquets"><i>04</i>Banquets</a>
+      <a href="#gallery"><i>05</i>Gallery</a>
+      <a href="#reviews"><i>06</i>Reviews</a>
+      <a href="#explore"><i>07</i>Explore</a>
+      <a href="#contact"><i>08</i>Contact</a>
     </nav>
     <div class="header-cta">
-      <a href="tel:+915102321133" class="btn btn-ghost btn-sm">Call to Book</a>
-      <a href="#contact" class="btn btn-gold btn-sm">Book Now</a>
+      <a href="tel:+915102321133" class="btn btn-ghost btn-sm" data-magnetic><span>Call to Book</span></a>
+      <a href="#contact" class="btn btn-gold btn-sm" data-magnetic><span>Book Now</span></a>
     </div>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
   </div>
@@ -60,52 +67,75 @@
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero" id="top">
-  <div class="hero-slides">
-    <div class="hero-slide active" style="background-image:url('img/real/real-exterior-signage.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('img/real/real-restaurant.jpg')"></div>
-    <div class="hero-slide" style="background-image:url('img/real/real-banquet.jpg')"></div>
+  <div class="hero-slides" data-parallax-wrap>
+    <div class="hero-slide active" data-cap="The Facade — Kanpur Road, Jhansi"><div class="ph" style="background-image:url('img/real/real-exterior-signage.jpg')"></div></div>
+    <div class="hero-slide" data-cap="Aroma — Fine Dine, Family Restaurant"><div class="ph" style="background-image:url('img/real/real-restaurant.jpg')"></div></div>
+    <div class="hero-slide" data-cap="Celebrations — Grand Banquet Halls"><div class="ph" style="background-image:url('img/real/real-banquet.jpg')"></div></div>
   </div>
   <div class="hero-shade"></div>
+
+  <div class="hero-side">Jhansi — Uttar Pradesh — Since 2013</div>
+  <div class="scroll-line"><span>Scroll</span><i></i></div>
+
   <div class="wrap hero-in">
-    <p class="eyebrow light reveal">Jhansi · Uttar Pradesh · Since 2013</p>
-    <h1 class="hero-title reveal">Hotel Sheela<br>Shree <em>Plaza</em></h1>
-    <p class="hero-sub reveal">Jhansi's first luxury business hotel — forty elegant rooms, celebrated dining and the city's grandest banquet halls, in the heart of Bundelkhand.</p>
-    <div class="hero-btns reveal">
-      <a href="#rooms" class="btn btn-gold">Explore Rooms</a>
-      <a href="#banquets" class="btn btn-outline-light">Plan an Event</a>
+    <div class="hero-kicker">
+      <span class="rule"></span>
+      <p>A landmark of Bundelkhand</p>
     </div>
-    <div class="hero-rating reveal">
-      <span class="hero-score">3.8</span>
-      <span class="hero-rating-txt"><strong>Google rating</strong> · 2,481 guest reviews</span>
+    <h1 class="hero-title display">
+      <span class="row"><span>Hotel Sheela</span></span>
+      <span class="row"><span>Shree <em>Plaza</em></span></span>
+    </h1>
+    <div class="hero-foot">
+      <div>
+        <p class="hero-sub">Jhansi's first luxury business hotel — forty elegant rooms, celebrated dining and the city's grandest banquet halls, in the heart of Bundelkhand.</p>
+        <div class="hero-cta-row" style="margin-top:34px">
+          <a href="#rooms" class="btn btn-gold" data-magnetic><span>Explore Rooms</span></a>
+          <a href="#banquets" class="btn btn-outline-light" data-magnetic><span>Plan an Event</span></a>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="hero-meta">
+    <div class="hero-score">3.8<small>/5</small></div>
+    <span class="hero-rating-txt">Google · 2,481 reviews</span>
+  </div>
+  <div class="hero-cap" id="heroCap">The Facade — Kanpur Road, Jhansi</div>
   <div class="hero-dots" id="heroDots"></div>
-  <div class="scroll-hint"><span></span></div>
 </section>
+
+<!-- ══════════ TICKER ══════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Since 2013</span><span>40 Elegant Rooms</span><span>Aroma Fine Dine</span><span>Food Xpress</span><span>3 Grand Banquet Halls</span><span>Jhansi · Uttar Pradesh</span>
+    <span>Since 2013</span><span>40 Elegant Rooms</span><span>Aroma Fine Dine</span><span>Food Xpress</span><span>3 Grand Banquet Halls</span><span>Jhansi · Uttar Pradesh</span>
+  </div>
+</div>
 
 <!-- ══════════ BOOKING BAR ══════════ -->
 <div class="bookbar">
   <div class="wrap bookbar-in">
-    <div class="bookbar-head">
-      <span class="eyebrow">Reservations</span>
-      <strong>Check availability</strong>
+    <div class="bookbar-head" data-reveal>
+      <p class="eyebrow">Reservations</p>
+      <strong>Check<br>availability</strong>
     </div>
-    <div class="bookbar-fields">
-      <label>Check-in<input type="date" id="bbIn"></label>
-      <label>Check-out<input type="date" id="bbOut"></label>
-      <label>Guests
+    <div class="bookbar-fields" data-reveal data-delay="120">
+      <div class="bfield"><label for="bbIn">Check-in</label><input type="date" id="bbIn"></div>
+      <div class="bfield"><label for="bbOut">Check-out</label><input type="date" id="bbOut"></div>
+      <div class="bfield"><label for="bbGuests">Guests</label>
         <select id="bbGuests">
           <option>1 Guest</option><option selected>2 Guests</option><option>3 Guests</option><option>4 Guests</option><option>5+ Guests</option>
         </select>
-      </label>
-      <label>Room
+      </div>
+      <div class="bfield"><label for="bbRoom">Room</label>
         <select id="bbRoom">
           <option>Executive Double — ₹2,199</option>
           <option>Executive Twin — ₹2,199</option>
           <option>Grand Double — ₹2,999</option>
         </select>
-      </label>
-      <button class="btn btn-ink" id="bbGo">Request Booking</button>
+      </div>
+      <button class="btn btn-ink" id="bbGo" data-magnetic><span>Request Booking</span></button>
     </div>
   </div>
 </div>
@@ -113,20 +143,25 @@
 <!-- ══════════ ABOUT ══════════ -->
 <section class="section cream" id="about">
   <div class="wrap about-grid">
-    <div class="about-media reveal">
-      <img src="img/real/real-exterior-facade.jpg" alt="Hotel Sheela Shree Plaza on Kanpur Road, Jhansi">
+    <div class="about-media" data-clip data-reveal="zoom">
+      <div class="about-ghost" data-parallax="0.12">2013</div>
+      <div class="frame"><img src="img/real/real-exterior-facade.jpg" alt="Hotel Sheela Shree Plaza on Kanpur Road, Jhansi"></div>
       <div class="about-badge"><strong>Since</strong><span>2013</span></div>
     </div>
     <div class="about-copy">
-      <p class="eyebrow reveal">Welcome to Sheela Shree</p>
-      <h2 class="h2 reveal">A landmark of hospitality<br>in <em>Bundelkhand</em></h2>
-      <p class="lead reveal">What began in 2013 as the city's first multi-cuisine fast-food outlet, Food Xpress, grew into Jhansi's first luxury business hotel — three grand banquet halls, forty elegant rooms and the beloved family restaurant Aroma.</p>
-      <p class="reveal">Set opposite Medical College Gate No. 1 on Kanpur Road, minutes from Jhansi Fort and Rani Mahal, the Plaza blends warm Indian hospitality with the comforts a modern traveller expects — round-the-clock room service, a 24-hour front desk and check-in at any hour.</p>
-      <div class="stats reveal">
-        <div class="stat"><strong data-count="40">0</strong><span>Elegant Rooms</span></div>
-        <div class="stat"><strong data-count="3">0</strong><span>Banquet Halls</span></div>
-        <div class="stat"><strong data-count="700">0</strong><span>Guest Capacity</span></div>
-        <div class="stat"><strong data-count="24">0</strong><span>Hour Front Desk</span></div>
+      <p class="sec-index" data-reveal>01 — The Story</p>
+      <p class="eyebrow" data-reveal>Welcome to Sheela Shree</p>
+      <h2 class="h2" data-reveal>
+        <span class="rl"><span>A landmark of</span></span>
+        <span class="rl"><span>hospitality in <em>Bundelkhand</em></span></span>
+      </h2>
+      <p class="lead" data-reveal>What began in 2013 as the city's first multi-cuisine fast-food outlet, Food Xpress, grew into Jhansi's first luxury business hotel — three grand banquet halls, forty elegant rooms and the beloved family restaurant Aroma.</p>
+      <p class="body" data-reveal>Set opposite Medical College Gate No. 1 on Kanpur Road, minutes from Jhansi Fort and Rani Mahal, the Plaza blends warm Indian hospitality with the comforts a modern traveller expects — round-the-clock room service, a 24-hour front desk and check-in at any hour.</p>
+      <div class="stats" data-reveal>
+        <div class="stat"><strong><span data-count="40">0</span></strong><span>Elegant Rooms</span></div>
+        <div class="stat"><strong><span data-count="3">0</span></strong><span>Banquet Halls</span></div>
+        <div class="stat"><strong><span data-count="700">0</span><sup>+</sup></strong><span>Guest Capacity</span></div>
+        <div class="stat"><strong><span data-count="24">0</span></strong><span>Hour Front Desk</span></div>
       </div>
     </div>
   </div>
@@ -135,106 +170,106 @@
 <!-- ══════════ ROOMS ══════════ -->
 <section class="section dark" id="rooms">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow light reveal">Stay With Us</p>
-      <h2 class="h2 light reveal">Rooms & <em>Suites</em></h2>
-      <p class="sec-sub reveal">Central air-conditioning, LED TV with DTH, tea &amp; coffee maker, mini bar, electronic safe and 24-hour room service in every room.</p>
+    <div class="sec-head split">
+      <div>
+        <p class="sec-index" data-reveal>02 — Stay</p>
+        <h2 class="h2 light" data-reveal>
+          <span class="rl"><span>Rooms &amp; <em>Suites</em></span></span>
+        </h2>
+      </div>
+      <p class="sec-sub" data-reveal>Central air-conditioning, LED TV with DTH, tea &amp; coffee maker, mini bar, electronic safe and 24-hour room service in every room.</p>
     </div>
-    <div class="room-grid">
-      <article class="room-card reveal">
-        <div class="room-img"><img src="img/real/real-room-double.jpg" alt="Executive Room with Double Bed"></div>
-        <div class="room-body">
-          <span class="room-tag">Most Popular</span>
-          <h3>Executive Room<br><em>Double Bed</em></h3>
-          <p>One queen bed dressed in crisp linens, warm wood finishes and soft lamplight — a calm retreat for business and leisure travellers alike.</p>
-          <ul class="room-feats">
-            <li>1 Queen Bed</li><li>City View</li><li>Work Desk</li>
-          </ul>
-          <div class="room-foot">
-            <div class="room-price"><small>from</small><strong>₹2,199</strong><small>/ night</small></div>
-            <button class="btn btn-gold btn-sm reserve" data-room="Executive Double Bed Room (₹2,199/night)">Reserve</button>
-          </div>
+
+    <article class="room-row" data-clip>
+      <div class="rr-media"><div class="ph"><img src="img/real/real-room-double.jpg" alt="Executive Room with Double Bed"></div></div>
+      <div class="rr-copy" data-reveal="right">
+        <div class="rr-num">01</div>
+        <span class="rr-tag">Most Popular</span>
+        <h3>Executive Room<br><em>Double Bed</em></h3>
+        <p>One queen bed dressed in crisp linens, warm wood finishes and soft lamplight — a calm retreat for business and leisure travellers alike.</p>
+        <ul class="rr-feats"><li>1 Queen Bed</li><li>City View</li><li>Work Desk</li></ul>
+        <div class="rr-foot">
+          <div class="rr-price"><small>from</small><strong>₹2,199</strong><small>/ night</small></div>
+          <button class="btn btn-gold btn-sm reserve" data-room="Executive Double Bed Room (₹2,199/night)" data-magnetic><span>Reserve</span></button>
         </div>
-      </article>
-      <article class="room-card reveal">
-        <div class="room-img"><img src="img/real/real-room-twin.jpg" alt="Executive Room with Twin Beds"></div>
-        <div class="room-body">
-          <span class="room-tag">Family &amp; Friends</span>
-          <h3>Executive Room<br><em>Twin Beds</em></h3>
-          <p>Two comfortable single beds with the same plush bedding and thoughtful touches — ideal for colleagues, friends and families travelling together.</p>
-          <ul class="room-feats">
-            <li>2 Single Beds</li><li>City View</li><li>Work Desk</li>
-          </ul>
-          <div class="room-foot">
-            <div class="room-price"><small>from</small><strong>₹2,199</strong><small>/ night</small></div>
-            <button class="btn btn-gold btn-sm reserve" data-room="Executive Twin Bed Room (₹2,199/night)">Reserve</button>
-          </div>
+      </div>
+    </article>
+
+    <article class="room-row flip" data-clip>
+      <div class="rr-media"><div class="ph"><img src="img/real/real-room-twin.jpg" alt="Executive Room with Twin Beds"></div></div>
+      <div class="rr-copy" data-reveal="left">
+        <div class="rr-num">02</div>
+        <span class="rr-tag">Family &amp; Friends</span>
+        <h3>Executive Room<br><em>Twin Beds</em></h3>
+        <p>Two comfortable single beds with the same plush bedding and thoughtful touches — ideal for colleagues, friends and families travelling together.</p>
+        <ul class="rr-feats"><li>2 Single Beds</li><li>City View</li><li>Work Desk</li></ul>
+        <div class="rr-foot">
+          <div class="rr-price"><small>from</small><strong>₹2,199</strong><small>/ night</small></div>
+          <button class="btn btn-gold btn-sm reserve" data-room="Executive Twin Bed Room (₹2,199/night)" data-magnetic><span>Reserve</span></button>
         </div>
-      </article>
-      <article class="room-card reveal">
-        <div class="room-img"><img src="img/real/real-room-breakfast.jpg" alt="Grand Room with King Bed"></div>
-        <div class="room-body">
-          <span class="room-tag">Signature</span>
-          <h3>Grand Room<br><em>King Bed</em></h3>
-          <p>Our finest address — a king bed beneath a carved jharokha-style headboard, sitting area and sweeping evening views across the city.</p>
-          <ul class="room-feats">
-            <li>1 King Bed</li><li>Sitting Area</li><li>Premium View</li>
-          </ul>
-          <div class="room-foot">
-            <div class="room-price"><small>from</small><strong>₹2,999</strong><small>/ night</small></div>
-            <button class="btn btn-gold btn-sm reserve" data-room="Grand Double Bed Room (₹2,999/night)">Reserve</button>
-          </div>
+      </div>
+    </article>
+
+    <article class="room-row" data-clip>
+      <div class="rr-media"><div class="ph"><img src="img/real/real-room-breakfast.jpg" alt="Grand Room with King Bed"></div></div>
+      <div class="rr-copy" data-reveal="right">
+        <div class="rr-num">03</div>
+        <span class="rr-tag">Signature</span>
+        <h3>Grand Room<br><em>King Bed</em></h3>
+        <p>Our finest address — a king bed beneath a carved jharokha-style headboard, sitting area and sweeping evening views across the city.</p>
+        <ul class="rr-feats"><li>1 King Bed</li><li>Sitting Area</li><li>Premium View</li></ul>
+        <div class="rr-foot">
+          <div class="rr-price"><small>from</small><strong>₹2,999</strong><small>/ night</small></div>
+          <button class="btn btn-gold btn-sm reserve" data-room="Grand Double Bed Room (₹2,999/night)" data-magnetic><span>Reserve</span></button>
         </div>
-      </article>
-    </div>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ══════════ AMENITIES ══════════ -->
-<section class="amen-strip">
-  <div class="wrap amen-grid">
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.9a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M2 9.4a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1.4" fill="currentColor"/></svg><span>Free Wi-Fi</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20M8 9h8"/></svg><span>Central AC</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>24-hr Room Service</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>In-room Safe</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17h18M5 17V7h14v10M9 7V4h6v3"/></svg><span>Business Centre</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14l1.5-6h-17zM7 17v2M17 17v2M9 11V8h6v3"/></svg><span>Free Parking</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 8a5 5 0 0 0-9.9-1H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2zM7 13h4"/></svg><span>Laundry</span></div>
-    <div class="amen reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg><span>Travel Desk</span></div>
+<!-- ══════════ AMENITIES MARQUEE ══════════ -->
+<div class="amen-marq" aria-label="Hotel amenities">
+  <div class="amen-track">
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.9a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M2 9.4a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1.4" fill="currentColor"/></svg><span>Free Wi-Fi</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20M8 9h8"/></svg><span>Central AC</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>24-hr Room Service</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>In-room Safe</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17h18M5 17V7h14v10M9 7V4h6v3"/></svg><span>Business Centre</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14l1.5-6h-17zM7 17v2M17 17v2M9 11V8h6v3"/></svg><span>Free Parking</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 8a5 5 0 0 0-9.9-1H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2zM7 13h4"/></svg><span>Laundry</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg><span>Travel Desk</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.9a10 10 0 0 1 14 0M8.5 16.4a5 5 0 0 1 7 0M2 9.4a15 15 0 0 1 20 0"/><circle cx="12" cy="19.5" r="1.4" fill="currentColor"/></svg><span>Free Wi-Fi</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M2 20h20M8 9h8"/></svg><span>Central AC</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span>24-hr Room Service</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>In-room Safe</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 17h18M5 17V7h14v10M9 7V4h6v3"/></svg><span>Business Centre</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 17h14l1.5-6h-17zM7 17v2M17 17v2M9 11V8h6v3"/></svg><span>Free Parking</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 8a5 5 0 0 0-9.9-1H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-2zM7 13h4"/></svg><span>Laundry</span><i>✦</i></span>
+    <span class="amen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5 13 13l-4.5 2.5L11 11z"/></svg><span>Travel Desk</span><i>✦</i></span>
   </div>
-</section>
+</div>
 
 <!-- ══════════ DINING ══════════ -->
-<section class="section dark dining" id="dining">
+<section class="section dark" id="dining">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow light reveal">Taste of the Plaza</p>
-      <h2 class="h2 light reveal">Dining & <em>Flavours</em></h2>
+    <p class="sec-index" data-reveal>03 — Taste</p>
+    <div class="dine-feature" data-clip>
+      <div class="df-media"><img src="img/real/real-dining-hall.jpg" alt="Aroma restaurant dining hall"></div>
+      <div class="dine-word">AR<em>O</em>MA</div>
     </div>
     <div class="dine-grid">
-      <article class="dine-main reveal">
-        <img src="img/real/real-dining-hall.jpg" alt="Aroma restaurant dining hall">
-        <div class="dine-main-copy">
-          <span class="room-tag">Fine Dine</span>
-          <h3>AROMA</h3>
-          <p>Our family fine-dine multi-cuisine restaurant — Indian, Chinese, Italian and Mughlai classics served under warm light, with a full-spread breakfast of Indian and continental favourites each morning.</p>
-        </div>
-      </article>
-      <article class="dine-card reveal">
-        <img src="img/real/real-restaurant.jpg" alt="Food Xpress restaurant">
-        <div class="dine-card-copy">
-          <span class="room-tag">Café</span>
-          <h3>FOOD XPRESS</h3>
-          <p>Where it all began in 2013 — the city's beloved fast-food outlet. Chinese, Tandoor, South Indian, chaats, snacks and value combo meals.</p>
-        </div>
-      </article>
-      <div class="dine-card dine-delivery reveal">
-        <div class="dine-card-copy">
-          <span class="room-tag">At Your Door</span>
-          <h3>BAKERY &amp; HOME DELIVERY</h3>
-          <p>Fresh from our bakery to your doorstep, anywhere in the city. One call and dinner is on its way.</p>
-          <a class="delivery-num" href="tel:+917317705705">+91 7317 705 705</a>
-        </div>
+      <div class="dine-card" data-reveal>
+        <div class="dc-media"><img src="img/real/real-restaurant.jpg" alt="Food Xpress restaurant"></div>
+        <span class="rr-tag">Café · Since 2013</span>
+        <h3>FOOD XPRESS</h3>
+        <p>Where it all began in 2013 — the city's beloved fast-food outlet. Chinese, Tandoor, South Indian, chaats, snacks and value combo meals.</p>
+      </div>
+      <div class="dine-card offset" data-reveal data-delay="140">
+        <div class="dc-media"><img src="img/real/real-pavbhaji.jpg" alt="Pav bhaji at Food Xpress"></div>
+        <span class="rr-tag">At Your Door</span>
+        <h3>BAKERY &amp; HOME DELIVERY</h3>
+        <p>Fresh from our bakery to your doorstep, anywhere in the city. One call and dinner is on its way.</p>
+        <a class="delivery-num" href="tel:+917317705705" data-hover>+91 7317 705 705</a>
       </div>
     </div>
   </div>
@@ -243,55 +278,63 @@
 <!-- ══════════ BANQUETS ══════════ -->
 <section class="section cream" id="banquets">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow reveal">Celebrations</p>
-      <h2 class="h2 reveal">Banquets & <em>Events</em></h2>
-      <p class="sec-sub reveal">Three of the most spacious banquet halls in the city — Swagat, Satkar and Utsav — hosting 600 to 700 guests together, fully air-conditioned.</p>
-    </div>
+    <p class="sec-index" data-reveal>04 — Celebrations</p>
     <div class="banq-grid">
-      <div class="banq-img reveal"><img src="img/real/real-banquet.jpg" alt="Banquet hall set for an event"></div>
+      <div class="banq-media" data-clip data-reveal="zoom">
+        <div class="frame"><img src="img/real/real-banquet.jpg" alt="Banquet hall set for an event"></div>
+        <div class="banq-cap"><strong>700</strong><span>Guests</span></div>
+      </div>
       <div class="banq-copy">
-        <h3 class="reveal">Weddings · Receptions · Conferences</h3>
-        <p class="reveal">Marriages, engagements, birthdays, anniversaries, kitty parties and club functions — plus conferences and board meets for 20 to 600 delegates in our AC conference and board rooms.</p>
-        <ul class="banq-list reveal">
-          <li><strong>Swagat · Satkar · Utsav</strong> — three grand halls, 600–700 guests combined</li>
-          <li><strong>Complimentary hall</strong> for gatherings above 50 guests</li>
-          <li><strong>Outdoor catering</strong> at your home, marriage garden or venue of choice</li>
-          <li><strong>Round-the-clock</strong> event support from our banquet team</li>
+        <p class="eyebrow" data-reveal>Swagat · Satkar · Utsav</p>
+        <h2 class="h2" data-reveal>
+          <span class="rl"><span>Banquets &amp;</span></span>
+          <span class="rl"><span><em>grand events</em></span></span>
+        </h2>
+        <p data-reveal>Three of the most spacious banquet halls in the city — fully air-conditioned, hosting 600 to 700 guests together. Weddings, receptions, conferences, kitty parties and club functions, plus board meets for 20 to 600 delegates.</p>
+        <ul class="banq-list" data-reveal>
+          <li><i>i.</i><span><strong>Swagat · Satkar · Utsav</strong> — three grand halls, 600–700 guests combined</span></li>
+          <li><i>ii.</i><span><strong>Complimentary hall</strong> for gatherings above 50 guests</span></li>
+          <li><i>iii.</i><span><strong>Outdoor catering</strong> at your home, marriage garden or venue of choice</span></li>
+          <li><i>iv.</i><span><strong>Round-the-clock</strong> event support from our banquet team</span></li>
         </ul>
-        <a href="#contact" class="btn btn-ink reveal" data-event="Banquet enquiry">Enquire for Your Event</a>
+        <div data-reveal><a href="#contact" class="btn btn-ink" data-event="Banquet enquiry" data-magnetic><span>Enquire for Your Event</span></a></div>
       </div>
     </div>
-    <div class="banq-terms reveal">
-      <h4>Banquet terms, at a glance</h4>
-      <div class="terms-grid">
-        <div><strong>50% token advance</strong><span>at booking; balance 48 hrs before the event</span></div>
-        <div><strong>Below 50 guests</strong><span>hall at ₹3,000 for 3 hours</span></div>
-        <div><strong>Menu changes</strong><span>inform us a day prior; we cater 10% over minimum guarantee</span></div>
-        <div><strong>Evenings</strong><span>kitchens close at 11:30 PM</span></div>
-      </div>
+    <div class="terms" data-reveal>
+      <div class="term"><strong>50% token advance</strong><span>at booking; balance 48 hrs before the event</span></div>
+      <div class="term"><strong>Below 50 guests</strong><span>hall at ₹3,000 for 3 hours</span></div>
+      <div class="term"><strong>Menu changes</strong><span>inform us a day prior; we cater 10% over minimum guarantee</span></div>
+      <div class="term"><strong>Evenings</strong><span>kitchens close at 11:30 PM</span></div>
     </div>
   </div>
 </section>
 
 <!-- ══════════ GALLERY ══════════ -->
-<section class="section dark" id="gallery">
+<section class="section dark" id="gallery" style="padding-left:0;padding-right:0">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow light reveal">Moments</p>
-      <h2 class="h2 light reveal">The <em>Gallery</em></h2>
+    <div class="sec-head split">
+      <div>
+        <p class="sec-index" data-reveal>05 — Moments</p>
+        <h2 class="h2 light" data-reveal>
+          <span class="rl"><span>The <em>Gallery</em></span></span>
+        </h2>
+      </div>
+      <p class="sec-sub" data-reveal>Drag through the Plaza — every frame shot on location.</p>
     </div>
-    <div class="gal-grid">
-      <button class="gal-item tall reveal" data-full="img/real/real-exterior-signage.jpg"><img src="img/real/real-exterior-signage.jpg" alt="Hotel Sheela Shree Plaza signage"><span>Hotel Facade</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-room-twin.jpg"><img src="img/real/real-room-twin.jpg" alt="Twin-bed guest room"><span>Twin Room</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-dining-hall.jpg"><img src="img/real/real-dining-hall.jpg" alt="Aroma dining hall"><span>Aroma Dining Hall</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-room-double.jpg"><img src="img/real/real-room-double.jpg" alt="Double-bed guest room"><span>Comfort Double</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-banquet.jpg"><img src="img/real/real-banquet.jpg" alt="Banquet hall"><span>Banquet Hall</span></button>
-      <button class="gal-item tall reveal" data-full="img/real/real-pavbhaji.jpg"><img src="img/real/real-pavbhaji.jpg" alt="Pav bhaji at Food Xpress"><span>Food Xpress Specials</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-restaurant.jpg"><img src="img/real/real-restaurant.jpg" alt="Restaurant interior"><span>The Restaurant</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-room-breakfast.jpg"><img src="img/real/real-room-breakfast.jpg" alt="Guest room with breakfast"><span>Wake Up to Breakfast</span></button>
-      <button class="gal-item reveal" data-full="img/real/real-exterior-facade.jpg"><img src="img/real/real-exterior-facade.jpg" alt="Hotel building on Kanpur Road"><span>On Kanpur Road</span></button>
+  </div>
+  <div class="gal-wrap" data-reveal>
+    <div class="gal-strip" id="galStrip">
+      <figure class="gal-item" data-full="img/real/real-exterior-signage.jpg" data-view><img src="img/real/real-exterior-signage.jpg" alt="Hotel Sheela Shree Plaza signage" draggable="false"><figcaption>Hotel Facade</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-room-twin.jpg" data-view><img src="img/real/real-room-twin.jpg" alt="Twin-bed guest room" draggable="false"><figcaption>Twin Room</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-dining-hall.jpg" data-view><img src="img/real/real-dining-hall.jpg" alt="Aroma dining hall" draggable="false"><figcaption>Aroma Dining Hall</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-room-double.jpg" data-view><img src="img/real/real-room-double.jpg" alt="Double-bed guest room" draggable="false"><figcaption>Comfort Double</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-banquet.jpg" data-view><img src="img/real/real-banquet.jpg" alt="Banquet hall" draggable="false"><figcaption>Banquet Hall</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-pavbhaji.jpg" data-view><img src="img/real/real-pavbhaji.jpg" alt="Pav bhaji at Food Xpress" draggable="false"><figcaption>Food Xpress Specials</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-restaurant.jpg" data-view><img src="img/real/real-restaurant.jpg" alt="Restaurant interior" draggable="false"><figcaption>The Restaurant</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-room-breakfast.jpg" data-view><img src="img/real/real-room-breakfast.jpg" alt="Guest room with breakfast" draggable="false"><figcaption>Wake Up to Breakfast</figcaption></figure>
+      <figure class="gal-item" data-full="img/real/real-exterior-facade.jpg" data-view><img src="img/real/real-exterior-facade.jpg" alt="Hotel building on Kanpur Road" draggable="false"><figcaption>On Kanpur Road</figcaption></figure>
     </div>
+    <div class="wrap"><div class="gal-hint">Drag to explore</div></div>
   </div>
 </section>
 <div class="lightbox" id="lightbox">
@@ -305,22 +348,25 @@
 <!-- ══════════ EXPLORE JHANSI ══════════ -->
 <section class="section cream" id="explore">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow reveal">Incredible Jhansi</p>
-      <h2 class="h2 reveal">Step Out & <em>Explore</em></h2>
-      <p class="sec-sub reveal">The Plaza sits minutes from the legends of Bundelkhand. Our travel desk arranges pick-up, drop, taxi hire and tickets.</p>
+    <p class="sec-index" data-reveal>06 — Beyond</p>
+    <div class="sec-head split">
+      <h2 class="h2" data-reveal>
+        <span class="rl"><span>Step out &amp;</span></span>
+        <span class="rl"><span><em>explore Jhansi</em></span></span>
+      </h2>
+      <p class="sec-sub" data-reveal>The Plaza sits minutes from the legends of Bundelkhand. Our travel desk arranges pick-up, drop, taxi hire and tickets.</p>
     </div>
     <div class="exp-grid">
-      <article class="exp-card reveal">
+      <article class="exp-card" data-reveal>
         <img src="img/explore-fort.jpg" alt="Jhansi Fort at sunset">
         <div class="exp-body"><span class="exp-dist">4 km</span><h3>Jhansi Fort</h3><p>The hilltop citadel of Rani Lakshmibai — ramparts, ten gates and sweeping views over the old city.</p></div>
       </article>
-      <article class="exp-card reveal">
+      <article class="exp-card" data-reveal data-delay="140">
         <img src="img/explore-ranimahal.jpg" alt="Rani Mahal, Jhansi">
         <div class="exp-body"><span class="exp-dist">4.5 km</span><h3>Rani Mahal</h3><p>The 18th-century palace that was once the queen's residence, now a museum of Bundelkhand's past.</p></div>
       </article>
     </div>
-    <div class="exp-list reveal">
+    <div class="exp-list" data-reveal>
       <div><strong>Government Museum</strong><span>Terracotta, bronzes, weapons &amp; manuscripts</span></div>
       <div><strong>Rani Lakshmi Bai Park</strong><span>Evening strolls &amp; the memorial</span></div>
       <div><strong>Maha Lakshmi Temple</strong><span>18th-century shrine near Laxmi Darwaza</span></div>
@@ -332,113 +378,96 @@
 </section>
 
 <!-- ══════════ REVIEWS ══════════ -->
-<section class="reviews" id="reviews">
+<section class="reviews section" id="reviews">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow light reveal">Guest Words</p>
-      <h2 class="h2 light reveal">Loved by <em>Travellers</em></h2>
-      <div class="rev-agg reveal">
-        <span class="rev-score">3.8</span>
-        <span class="rev-stars" aria-label="3.8 out of 5 stars">★★★★<span class="off">★</span></span>
-        <span class="rev-agg-txt"><strong>2,481 Google reviews</strong> · rated 3.4 on Tripadvisor</span>
-      </div>
+    <p class="sec-index" data-reveal>07 — Guest Words</p>
+    <h2 class="h2 light" data-reveal>
+      <span class="rl"><span>Loved by</span></span>
+      <span class="rl"><span><em>travellers</em></span></span>
+    </h2>
+    <div class="rev-agg" data-reveal>
+      <span class="rev-score">3.8</span>
+      <span class="rev-stars" aria-label="3.8 out of 5 stars">★★★★<span class="off">★</span></span>
+      <span class="rev-agg-txt"><strong>2,481 Google reviews</strong><br>rated 3.4 on Tripadvisor</span>
     </div>
-    <div class="rev-grid">
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Google</span></div>
-        <p>"Good service, food is very delicious, staff behaviour is also good. Overall good experience. Recommended."</p>
-        <footer><strong>Shailrsh Bhavsar</strong><span>4 months ago</span></footer>
-      </article>
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div>
-        <p>"It was a nice experience staying here. Staff is very kind. Food is really great. If you plan to visit Jhansi do consider staying at The Sheela Shree Plaza."</p>
-        <footer><strong>Swati</strong><span>3 months ago · Business trip</span></footer>
-      </article>
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Tripadvisor</span></div>
-        <p>"We booked this hotel on the fly to halt and break our journey. The food served is very tasty and both veg and non veg items served were good. Its value for money hotel and staff are very hospitable."</p>
-        <footer><strong>Ved P</strong><span>Family road trip</span></footer>
-      </article>
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div>
-        <p>"Very good hotel in the heart of Jhansi. They serve excellent tea and good breakfast. Rooms are spacious with all basic amenities and cleanliness is remarkable."</p>
-        <footer><strong>Jivraj Sandhu</strong><span>9 months ago</span></footer>
-      </article>
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div>
-        <p>"Located on a prominent main road, guard helped me park my car, decently done up room, courteous staff, enjoyable stay at a value for money price. Would recommend!"</p>
-        <footer><strong>Ujjal Kumar Jain</strong><span>5 months ago · Couple trip</span></footer>
-      </article>
-      <article class="rev-card reveal">
-        <div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div>
-        <p>"Good simple hotel, comfortable atmosphere, tasty buffet style breakfast, helpful staff."</p>
-        <footer><strong>Ashar Khan</strong><span>2 months ago · Family trip</span></footer>
-      </article>
-    </div>
-    <p class="rev-note reveal">Reviews quoted verbatim from Google Maps and Tripadvisor.</p>
   </div>
+  <div class="rev-rows">
+    <div class="rev-row"><div class="rev-track">
+      <article class="rev-card"><span class="q">“</span><p>Good service, food is very delicious, staff behaviour is also good. Overall good experience. Recommended.</p><div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Google</span></div><footer><strong>Shailrsh Bhavsar</strong><span>4 months ago</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>It was a nice experience staying here. Staff is very kind. Food is really great. If you plan to visit Jhansi do consider staying at The Sheela Shree Plaza.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Swati</strong><span>3 months ago · Business trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>We booked this hotel on the fly to halt and break our journey. The food served is very tasty and both veg and non veg items served were good. Its value for money hotel and staff are very hospitable.</p><div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Tripadvisor</span></div><footer><strong>Ved P</strong><span>Family road trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Good service, food is very delicious, staff behaviour is also good. Overall good experience. Recommended.</p><div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Google</span></div><footer><strong>Shailrsh Bhavsar</strong><span>4 months ago</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>It was a nice experience staying here. Staff is very kind. Food is really great. If you plan to visit Jhansi do consider staying at The Sheela Shree Plaza.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Swati</strong><span>3 months ago · Business trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>We booked this hotel on the fly to halt and break our journey. The food served is very tasty and both veg and non veg items served were good. Its value for money hotel and staff are very hospitable.</p><div class="rev-top"><span class="rev-stars sm">★★★★★</span><span class="rev-src">Tripadvisor</span></div><footer><strong>Ved P</strong><span>Family road trip</span></footer></article>
+    </div></div>
+    <div class="rev-row rev"><div class="rev-track">
+      <article class="rev-card"><span class="q">“</span><p>Very good hotel in the heart of Jhansi. They serve excellent tea and good breakfast. Rooms are spacious with all basic amenities and cleanliness is remarkable.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Jivraj Sandhu</strong><span>9 months ago</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Located on a prominent main road, guard helped me park my car, decently done up room, courteous staff, enjoyable stay at a value for money price. Would recommend!</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Ujjal Kumar Jain</strong><span>5 months ago · Couple trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Good simple hotel, comfortable atmosphere, tasty buffet style breakfast, helpful staff.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Ashar Khan</strong><span>2 months ago · Family trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Very good hotel in the heart of Jhansi. They serve excellent tea and good breakfast. Rooms are spacious with all basic amenities and cleanliness is remarkable.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Jivraj Sandhu</strong><span>9 months ago</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Located on a prominent main road, guard helped me park my car, decently done up room, courteous staff, enjoyable stay at a value for money price. Would recommend!</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Ujjal Kumar Jain</strong><span>5 months ago · Couple trip</span></footer></article>
+      <article class="rev-card"><span class="q">“</span><p>Good simple hotel, comfortable atmosphere, tasty buffet style breakfast, helpful staff.</p><div class="rev-top"><span class="rev-stars sm">★★★★<span class="off">★</span></span><span class="rev-src">Google</span></div><footer><strong>Ashar Khan</strong><span>2 months ago · Family trip</span></footer></article>
+    </div></div>
+  </div>
+  <div class="wrap"><p class="rev-note" data-reveal>Review excerpts sourced from Google Maps and Tripadvisor.</p></div>
 </section>
 
 <!-- ══════════ CONTACT ══════════ -->
 <section class="section cream" id="contact">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow reveal">Get in Touch</p>
-      <h2 class="h2 reveal">Book Your <em>Stay</em></h2>
-      <p class="sec-sub reveal">Send a booking request — our front desk replies round the clock. Or simply call us.</p>
-    </div>
+    <p class="sec-index" data-reveal>08 — Reservations</p>
+    <h2 class="h2" data-reveal style="max-width:14ch">
+      <span class="rl"><span>Book your</span></span>
+      <span class="rl"><span><em>stay</em> with us</span></span>
+    </h2>
+    <p class="sec-sub" data-reveal style="margin-bottom:64px">Send a booking request — our front desk replies round the clock. Or simply call us.</p>
     <div class="contact-grid">
-      <form class="contact-form reveal" id="bookForm">
+      <form class="contact-form" id="bookForm" data-reveal>
         <div class="frow">
-          <label>Full name<input type="text" id="fName" placeholder="Your name" required></label>
-          <label>Phone<input type="tel" id="fPhone" placeholder="+91 …" required></label>
+          <div class="field"><label for="fName">Full name</label><input type="text" id="fName" placeholder="Your name" required><span class="bar"></span></div>
+          <div class="field"><label for="fPhone">Phone</label><input type="tel" id="fPhone" placeholder="+91 …" required><span class="bar"></span></div>
         </div>
         <div class="frow">
-          <label>Check-in<input type="date" id="fIn"></label>
-          <label>Check-out<input type="date" id="fOut"></label>
+          <div class="field"><label for="fIn">Check-in</label><input type="date" id="fIn"><span class="bar"></span></div>
+          <div class="field"><label for="fOut">Check-out</label><input type="date" id="fOut"><span class="bar"></span></div>
         </div>
         <div class="frow">
-          <label>Room / Enquiry
+          <div class="field"><label for="fRoom">Room / Enquiry</label>
             <select id="fRoom">
               <option>Executive Double Bed — ₹2,199/night</option>
               <option>Executive Twin Bed — ₹2,199/night</option>
               <option>Grand Double Bed — ₹2,999/night</option>
               <option>Banquet / Event enquiry</option>
               <option>Other</option>
-            </select>
-          </label>
-          <label>Guests
-            <select id="fGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select>
-          </label>
+            </select><span class="bar"></span>
+          </div>
+          <div class="field"><label for="fGuests">Guests</label>
+            <select id="fGuests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5+</option></select><span class="bar"></span>
+          </div>
         </div>
-        <label>Message<textarea id="fMsg" rows="4" placeholder="Anything we should know — early check-in, occasion, dietary needs…"></textarea></label>
+        <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" rows="3" placeholder="Early check-in, occasion, dietary needs…"></textarea><span class="bar"></span></div>
         <div class="form-btns">
-          <button type="submit" class="btn btn-gold">Send Booking Request</button>
-          <a class="btn btn-ink" href="tel:+915102321133">Call +91 510 232 1133</a>
+          <button type="submit" class="btn btn-gold" data-magnetic><span>Send Booking Request</span></button>
+          <a class="btn btn-ink" href="tel:+915102321133" data-magnetic><span>Call +91 510 232 1133</span></a>
         </div>
         <p class="form-note">Opens your email app addressed to our reservations desk.</p>
       </form>
-      <div class="contact-info">
-        <div class="c-card reveal">
+      <div class="contact-info" data-reveal data-delay="140">
+        <div class="c-row">
           <h4>Front Desk</h4>
-          <a href="tel:+915102321133">+91 510 232 1133 / 35 / 45</a>
-          <a href="tel:+917309030992">+91 73090 30992 / 93 / 95</a>
-          <span>Open 24 hours · check-in any time</span>
+          <div><a class="big" href="tel:+915102321133">+91 510 232 1133</a><a class="big" href="tel:+917309030992">+91 73090 30992</a><span>Open 24 hours · check-in any time</span></div>
         </div>
-        <div class="c-card reveal">
+        <div class="c-row">
           <h4>Write to Us</h4>
-          <a href="mailto:info@hotelsheelashree.com">info@hotelsheelashree.com</a>
-          <span>Reservations &amp; banquet enquiries</span>
+          <div><a class="big" href="mailto:info@hotelsheelashree.com">info@hotelsheelashree.com</a><span>Reservations &amp; banquet enquiries</span></div>
         </div>
-        <div class="c-card reveal">
+        <div class="c-row">
           <h4>Find Us</h4>
-          <p>Opp. Medical College Gate No. 1,<br>Kanpur Road, Jhansi – 284128,<br>Uttar Pradesh, India</p>
-          <a class="dir-link" href="https://www.google.com/maps/search/?api=1&query=Hotel+Sheela+Shree+Plaza+Opp+Medical+College+Gate+No+1+Kanpur+Road+Jhansi+284128" target="_blank" rel="noopener">Get Directions →</a>
+          <div><p>Opp. Medical College Gate No. 1,<br>Kanpur Road, Jhansi – 284128,<br>Uttar Pradesh, India</p><a class="dir-link" href="https://www.google.com/maps/search/?api=1&query=Hotel+Sheela+Shree+Plaza+Opp+Medical+College+Gate+No+1+Kanpur+Road+Jhansi+284128" target="_blank" rel="noopener" data-hover>Get Directions →</a></div>
         </div>
-        <div class="c-card reveal">
+        <div class="c-row">
           <h4>Home Delivery</h4>
-          <a href="tel:+917317705705">+91 7317 705 705</a>
-          <span>Bakery &amp; Food Xpress, delivered hot</span>
+          <div><a class="big" href="tel:+917317705705">+91 7317 705 705</a><span>Bakery &amp; Food Xpress, delivered hot</span></div>
         </div>
       </div>
     </div>
@@ -447,35 +476,38 @@
 
 <!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
-  <div class="wrap footer-grid">
-    <div class="f-brand">
-      <img class="brand-logo f-logo" src="img/real/logo-light.png" alt="Hotel Sheela Shree Plaza — official logo">
-      <p>Jhansi's first luxury business hotel.<br>Opp. Medical College Gate No. 1,<br>Kanpur Road, Jhansi – 284128</p>
-      <a class="fb-link" href="https://www.facebook.com/HotelSheelaShree/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg>
-        Follow us on Facebook
-      </a>
+  <div class="wrap">
+    <div class="f-word" data-reveal>SHEELA SHREE <em>PLAZA</em></div>
+    <div class="footer-grid">
+      <div class="f-brand">
+        <img class="brand-logo f-logo" src="img/real/logo-light.png" alt="Hotel Sheela Shree Plaza — official logo">
+        <p>Jhansi's first luxury business hotel.<br>Opp. Medical College Gate No. 1,<br>Kanpur Road, Jhansi – 284128</p>
+        <a class="fb-link" href="https://www.facebook.com/HotelSheelaShree/" target="_blank" rel="noopener" data-hover>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.6-.1-1.4-.2-2.2-.2-2.2 0-3.7 1.3-3.7 3.8V11H8v3h2.5v7z"/></svg>
+          Follow us on Facebook
+        </a>
+      </div>
+      <div class="f-col">
+        <h5>Explore</h5>
+        <a href="#about">About</a><a href="#rooms">Rooms</a><a href="#dining">Dining</a>
+        <a href="#banquets">Banquets</a><a href="#gallery">Gallery</a><a href="#explore">Explore Jhansi</a>
+      </div>
+      <div class="f-col">
+        <h5>Contact</h5>
+        <a href="tel:+915102321133">+91 510 232 1133</a>
+        <a href="tel:+917309030992">+91 73090 30992 / 93 / 95</a>
+        <a href="mailto:info@hotelsheelashree.com">info@hotelsheelashree.com</a>
+      </div>
+      <div class="f-col">
+        <h5>Reservations</h5>
+        <p>Front desk open 24 hours.<br>Check-in &amp; check-out<br>at any hour.</p>
+        <a href="#contact" class="btn btn-gold btn-sm" data-magnetic><span>Book Now</span></a>
+      </div>
     </div>
-    <div class="f-col">
-      <h5>Explore</h5>
-      <a href="#about">About</a><a href="#rooms">Rooms</a><a href="#dining">Dining</a>
-      <a href="#banquets">Banquets</a><a href="#gallery">Gallery</a><a href="#explore">Explore Jhansi</a>
+    <div class="footer-base">
+      <span>© <span id="year"></span> Hotel Sheela Shree Plaza. All rights reserved.</span>
+      <span class="f-craft">Crafted with pride in Jhansi</span>
     </div>
-    <div class="f-col">
-      <h5>Contact</h5>
-      <a href="tel:+915102321133">+91 510 232 1133</a>
-      <a href="tel:+917309030992">+91 73090 30992 / 93 / 95</a>
-      <a href="mailto:info@hotelsheelashree.com">info@hotelsheelashree.com</a>
-    </div>
-    <div class="f-col">
-      <h5>Reservations</h5>
-      <p>Front desk open 24 hours.<br>Check-in &amp; check-out<br>at any hour.</p>
-      <a href="#contact" class="btn btn-gold btn-sm">Book Now</a>
-    </div>
-  </div>
-  <div class="wrap footer-base">
-    <span>© <span id="year"></span> Hotel Sheela Shree Plaza. All rights reserved.</span>
-    <span class="f-craft">Crafted with pride in Jhansi</span>
   </div>
 </footer>
 
