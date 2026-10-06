@@ -1,3 +1,8 @@
+<p>
+  <img src="https://img.shields.io/badge/Client-Work-purple?style=flat-square" alt="Client Work" />
+  <img src="https://img.shields.io/badge/Design-Concept-blue?style=flat-square" alt="Design Concept" />
+</p>
+
 # Hotel Sheela Shree Plaza — Website Concept
 
 A designer website concept for **Hotel Sheela Shree Plaza**, Jhansi (Uttar Pradesh, India) — opposite Medical College Gate No. 1, Kanpur Road.
